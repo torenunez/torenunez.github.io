@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shining Light on Overfitting</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Shining Light on Overfitting">
+  <meta name="author" content="torenunez">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Shining Light on Overfitting</h1>
+    <h2>Photovoltaic Pricing Trends and Projections</h2>
+    <p>torenunez<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Regression</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Almost any set of data can be perfectly fitted with some high-order complex polynomial.<br>
+
+<ul>
+<li>But what is the true benefit and at what cost?<br></li>
+</ul></li>
+</ul>
+
+<p>We will be looking at the following data. </p>
+
+<ul>
+<li>Photovoltaic System Pricing Trends: Historical, Recent, and Near-Term Projections 2015 Edition</li>
+<li>Which can be found <a href="https://en.openei.org/datasets/dataset/photovoltaic-system-pricing-trends-historical-recent-and-near-term-projections-2015-edition">here</a> </li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Let&#39;s take a look at some Photovoltaic Pricing Trends</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <p><img src="assets/fig/initial%20plot-1.png" alt="plot of chunk initial plot"></p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p>Do you see a trend?</p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Let&#39;s just draw a straight line.</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <p><img src="assets/fig/linear-1.png" alt="plot of chunk linear"></p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p>This gives us an R<sup>2</sup> of 0.94.<br>
+That&#39;s pretty good...<br>
+Do you think we could do any better?  </p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>How about a second order polynomial?</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <p><img src="assets/fig/second-1.png" alt="plot of chunk second"></p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p>This gives us an R<sup>2</sup> of 0.964.<br>
+Is that better?  </p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>How about a third order polynomial?</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <p><img src="assets/fig/third-1.png" alt="plot of chunk third"></p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p>This gives us an R<sup>2</sup> of 0.9642.  </p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>You get the idea</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>9th degree polynomial fit</h3>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><img src="assets/fig/ninth-1.png" alt="plot of chunk ninth"></p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p>This gives us an R<sup>2</sup> of 0.9744062.  </p>
+
+<ul>
+<li>It&#39;s only marginally better than the linear fit. 
+
+<ul>
+<li>It is better... but is it worth it? At what cost?</li>
+</ul></li>
+<li>How is it trending at the end?<br>
+
+<ul>
+<li>It is going up! That&#39;s actually contrary to what the latest data would suggest...</li>
+</ul></li>
+</ul>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>Conclusion</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>This is a very simple example that illustrates how simple might be better.<br>
+
+<ul>
+<li>Check out the <a href="https://www.coursera.org/learn/practical-machine-learning">Practical Machine Learning</a> to learn about the importance of: </li>
+<li>Loss of generality of the model.</li>
+<li>Overfitting</li>
+<li>Training and Testing Data Sets</li>
+<li>And much more!</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Regression'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Let&#39;s take a look at some Photovoltaic Pricing Trends'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Let&#39;s just draw a straight line.'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='How about a second order polynomial?'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='How about a third order polynomial?'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='You get the idea'>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='Conclusion'>
+         7
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
