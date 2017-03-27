@@ -1,6 +1,6 @@
-name: Your New Jekyll Site
-description: Blogging about stuffs
-meta_description: "Your New Jekyll Site, Blogging about stuffs"
+name: Salvador's website
+description: Strategy, Data Science, and Sustainability
+meta_description: "torenunez - strategy | data science | sustainability"
 
 markdown: kramdown
 highlighter: pygments
@@ -13,4 +13,4 @@ gems: [jekyll-paginate]
 
 # Details for the RSS feed generator
 url:            'blog url'
-author:         'Your Name'
+author:         'Salvador J Nunez'
