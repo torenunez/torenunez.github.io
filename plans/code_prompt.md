@@ -399,57 +399,59 @@ Each phase ends with a local preview so you can test and give feedback before pr
 
 ---
 
-### Phase 1: Setup
-1. Create branch: `upgrade-portfolio-system`
-2. Verify existing site builds successfully
-3. Create empty asset directories
+### Phase 1: Setup ✅
+1. ✅ Create branch: `upgrade-portfolio-system`
+2. ✅ Verify existing site builds successfully
+3. ✅ Create empty asset directories
 
 **Test:** Run `bundle exec jekyll serve` — existing site should still work unchanged.
 **You'll see:** The old blog-style site (confirms nothing is broken).
 
+**Note:** Required Ruby 4.0+ via Homebrew (`brew install ruby`) since system Ruby 2.6 was incompatible with modern Jekyll.
+
 ---
 
-### Phase 2: Design System
-4. Create `_sass/_tokens.scss` (colors, type, spacing, asset variables)
-5. Create `_sass/_base.scss` (reset, typography, links)
-6. Create `_sass/_layout.scss` (container, section, grid)
-7. Create `_sass/_components.scss` (cards, buttons, tags)
-8. Update `assets/css/main.scss` to import partials
+### Phase 2: Design System ✅
+4. ✅ Create `_sass/_tokens.scss` (colors, type, spacing, asset variables)
+5. ✅ Create `_sass/_base.scss` (reset, typography, links)
+6. ✅ Create `_sass/_layout.scss` (container, section, grid)
+7. ✅ Create `_sass/_components.scss` (cards, buttons, tags)
+8. ✅ Update `assets/css/main.scss` to import partials
 
 **Test:** Site builds without errors. Old site still displays (new CSS exists but isn't applied yet).
 **You'll see:** Same old site — this phase is foundation work.
 
 ---
 
-### Phase 3: Data
-9. Create `_data/profile.yml` (with placeholders)
-10. Create `_data/projects.yml` (with placeholders)
-11. Create `_data/experience.yml` (with placeholders)
+### Phase 3: Data ✅
+9. ✅ Create `_data/profile.yml` (with placeholders)
+10. ✅ Create `_data/projects.yml` (with placeholders)
+11. ✅ Create `_data/experience.yml` (with placeholders)
 
 **Test:** Site builds without errors.
 **You'll see:** Still the old site — data files exist but aren't used yet.
 
 ---
 
-### Phase 4: Includes
-12. Create `_includes/head.html` (meta, fonts, CSS)
-13. Create `_includes/nav.html`
-14. Create `_includes/hero.html`
-15. Create `_includes/projects.html` + `_includes/project_card.html`
-16. Create `_includes/experience.html` + `_includes/experience_item.html`
-17. Create `_includes/contact.html`
-18. Create `_includes/footer.html`
+### Phase 4: Includes ✅
+12. ✅ Create `_includes/head.html` (meta, fonts, CSS)
+13. ✅ Create `_includes/nav.html`
+14. ✅ Create `_includes/hero.html`
+15. ✅ Create `_includes/projects.html` + `_includes/project_card.html`
+16. ✅ Create `_includes/experience.html` + `_includes/experience_item.html`
+17. ✅ Create `_includes/contact.html`
+18. ✅ Create `_includes/footer.html`
 
 **Test:** Site builds without errors.
 **You'll see:** Still the old site — includes exist but aren't assembled yet.
 
 ---
 
-### Phase 5: Assembly (The Big Reveal)
-19. Create `_layouts/home.html`
-20. Update `_layouts/default.html`
-21. Update `index.html` to use home layout
-22. Update `_config.yml` with new metadata
+### Phase 5: Assembly (The Big Reveal) ✅
+19. ✅ Create `_layouts/home.html`
+20. ✅ Update `_layouts/default.html`
+21. ✅ Update `index.html` to use home layout
+22. ✅ Update `_config.yml` with new metadata
 
 **Test:** Run `bundle exec jekyll serve` and refresh browser.
 **You'll see:** The new portfolio site with all 4 sections (Hero, Projects, Experience, Contact) using placeholder content.
