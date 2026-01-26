@@ -1,0 +1,284 @@
+// ==============================================
+// LAYOUT: Container, sections, and grid utilities
+// Structural styles for page organization
+// ==============================================
+
+@use "tokens" as *;
+
+// ----------------------------------------------
+// CONTAINER
+// Centers content and constrains max-width
+// ----------------------------------------------
+
+.container {
+  width: 100%;
+  max-width: $container-max;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $space-4;
+  padding-right: $space-4;
+
+  @media (min-width: $breakpoint-md) {
+    padding-left: $space-6;
+    padding-right: $space-6;
+  }
+}
+
+// Narrow container for text-heavy content
+.container-narrow {
+  max-width: $container-narrow;
+}
+
+// ----------------------------------------------
+// SECTIONS
+// Consistent vertical rhythm between page sections
+// ----------------------------------------------
+
+.section {
+  padding-top: $space-12;
+  padding-bottom: $space-12;
+
+  @media (min-width: $breakpoint-md) {
+    padding-top: $space-16;
+    padding-bottom: $space-16;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    padding-top: $space-24;
+    padding-bottom: $space-24;
+  }
+}
+
+// Section with alternate background
+.section--alt {
+  background-color: $color-surface;
+}
+
+// Section backgrounds (using CSS custom properties for easy asset swapping)
+.section--hero {
+  background-color: var(--hero-bg-color);
+  background-image: var(--hero-bg-image);
+  background-size: cover;
+  background-position: center;
+}
+
+.section--projects {
+  background-color: var(--section-projects-bg);
+}
+
+.section--experience {
+  background-color: var(--section-experience-bg);
+}
+
+.section--contact {
+  background-color: var(--section-contact-bg);
+}
+
+// ----------------------------------------------
+// SECTION HEADERS
+// Consistent styling for section titles
+// ----------------------------------------------
+
+.section-header {
+  margin-bottom: $space-8;
+
+  @media (min-width: $breakpoint-md) {
+    margin-bottom: $space-12;
+  }
+}
+
+// Monospace micro-label for futuristic feel
+// Renders as: "01" (muted) above "Projects" (bold)
+.section-label {
+  display: block;
+  font-family: $font-mono;
+  font-size: $font-size-sm;
+  color: $color-text-muted;
+  margin-bottom: $space-2;
+  letter-spacing: 0.05em;
+}
+
+.section-title {
+  font-size: $font-size-2xl;
+  font-weight: $font-weight-bold;
+  color: $color-text;
+  margin: 0;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $font-size-3xl;
+  }
+}
+
+// Optional section description
+.section-description {
+  margin-top: $space-4;
+  font-size: $font-size-lg;
+  color: $color-text-muted;
+  max-width: $container-narrow;
+}
+
+// ----------------------------------------------
+// GRID
+// Simple responsive grid for cards
+// ----------------------------------------------
+
+.grid {
+  display: grid;
+  gap: $space-6;
+
+  @media (min-width: $breakpoint-md) {
+    gap: $space-8;
+  }
+}
+
+// Two-column grid
+.grid--2 {
+  @media (min-width: $breakpoint-md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+// Three-column grid (for projects)
+.grid--3 {
+  @media (min-width: $breakpoint-md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+// ----------------------------------------------
+// FLEX UTILITIES
+// Common flexbox patterns
+// ----------------------------------------------
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-2 {
+  gap: $space-2;
+}
+
+.gap-4 {
+  gap: $space-4;
+}
+
+.gap-6 {
+  gap: $space-6;
+}
+
+// ----------------------------------------------
+// SPACING UTILITIES
+// Quick margin/padding helpers
+// ----------------------------------------------
+
+.mt-4 { margin-top: $space-4; }
+.mt-6 { margin-top: $space-6; }
+.mt-8 { margin-top: $space-8; }
+
+.mb-4 { margin-bottom: $space-4; }
+.mb-6 { margin-bottom: $space-6; }
+.mb-8 { margin-bottom: $space-8; }
+
+// ----------------------------------------------
+// NAV
+// Sticky navigation bar
+// ----------------------------------------------
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba($color-surface, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid $color-border;
+  padding: $space-4 0;
+}
+
+.nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__logo {
+  font-weight: $font-weight-semibold;
+  font-size: $font-size-lg;
+  color: $color-text;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-text;
+    text-decoration: none;
+  }
+}
+
+.nav__links {
+  display: flex;
+  gap: $space-6;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  // Hide on mobile, show on tablet+
+  display: none;
+
+  @media (min-width: $breakpoint-md) {
+    display: flex;
+  }
+}
+
+.nav__link {
+  font-size: $font-size-sm;
+  color: $color-text-muted;
+  text-decoration: none;
+  transition: color $transition-base;
+
+  &:hover {
+    color: $color-text;
+    text-decoration: none;
+  }
+}
+
+// ----------------------------------------------
+// FOOTER
+// Minimal footer
+// ----------------------------------------------
+
+.footer {
+  padding: $space-8 0;
+  border-top: 1px solid $color-border;
+  text-align: center;
+}
+
+.footer__text {
+  font-size: $font-size-sm;
+  color: $color-text-muted;
+}

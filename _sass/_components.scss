@@ -1,0 +1,476 @@
+// ==============================================
+// COMPONENTS: Cards, buttons, tags, and other UI elements
+// Reusable building blocks for the interface
+// ==============================================
+
+@use "tokens" as *;
+
+// ----------------------------------------------
+// BUTTONS
+// ----------------------------------------------
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-2;
+
+  padding: $space-3 $space-6;
+  font-family: $font-sans;
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
+  line-height: 1;
+  text-decoration: none;
+
+  border: 1px solid transparent;
+  border-radius: $radius-sm;
+  cursor: pointer;
+
+  transition: all $transition-base;
+
+  // Accessible focus state
+  &:focus {
+    outline: 3px solid $color-accent;
+    outline-offset: 2px;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 3px solid $color-accent;
+    outline-offset: 2px;
+  }
+}
+
+// Primary button — solid accent color
+.btn--primary {
+  background-color: $color-accent;
+  color: white;
+
+  &:hover {
+    background-color: $color-accent-hover;
+    color: white;
+    text-decoration: none;
+    // Why translateY? GPU-accelerated, won't cause layout reflow
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+// Secondary button — outlined
+.btn--secondary {
+  background-color: transparent;
+  color: $color-text;
+  border-color: $color-border-strong;
+
+  &:hover {
+    background-color: $color-bg;
+    border-color: $color-text;
+    color: $color-text;
+    text-decoration: none;
+  }
+}
+
+// Ghost button — minimal, text-like
+.btn--ghost {
+  background-color: transparent;
+  color: $color-accent;
+  padding: $space-2 $space-4;
+
+  &:hover {
+    background-color: rgba($color-accent, 0.1);
+    color: $color-accent-hover;
+    text-decoration: none;
+  }
+}
+
+// ----------------------------------------------
+// CARDS
+// White background on page background for elevation
+// ----------------------------------------------
+
+.card {
+  background-color: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  padding: $space-6;
+
+  transition: transform $transition-base, box-shadow $transition-base, border-color $transition-base;
+
+  &:hover {
+    // Subtle lift effect
+    transform: translateY(-2px);
+    box-shadow: $shadow-md;
+    border-color: $color-border-strong;
+  }
+}
+
+// Card as a link (entire card is clickable)
+a.card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: 3px solid $color-accent;
+    outline-offset: 2px;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 3px solid $color-accent;
+    outline-offset: 2px;
+  }
+}
+
+.card__title {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-semibold;
+  margin-bottom: $space-2;
+  color: $color-text;
+}
+
+.card__description {
+  font-size: $font-size-base;
+  color: $color-text-muted;
+  margin-bottom: $space-4;
+
+  // Limit to 3 lines with ellipsis
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: $space-3;
+}
+
+.card__link {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  color: $color-accent;
+  display: inline-flex;
+  align-items: center;
+  gap: $space-1;
+
+  &:hover {
+    color: $color-accent-hover;
+  }
+
+  // Arrow icon animation
+  svg {
+    transition: transform $transition-base;
+  }
+
+  &:hover svg {
+    transform: translateX(2px);
+  }
+}
+
+// ----------------------------------------------
+// TAGS
+// Small labels for technologies, categories
+// ----------------------------------------------
+
+.tag {
+  display: inline-block;
+  padding: $space-1 $space-2;
+  font-family: $font-mono;
+  font-size: $font-size-xs;
+  color: $color-text-muted;
+  background-color: $color-bg;
+  border-radius: $radius-sm;
+  white-space: nowrap;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-2;
+}
+
+// ----------------------------------------------
+// SOCIAL LINKS
+// Icons for GitHub, LinkedIn, Email
+// ----------------------------------------------
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: $space-4;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-text-muted;
+  transition: color $transition-base;
+
+  &:hover {
+    color: $color-accent;
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: 3px solid $color-accent;
+    outline-offset: 2px;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 3px solid $color-accent;
+    outline-offset: 2px;
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+// Social links with labels (for contact section)
+.social-link--labeled {
+  gap: $space-2;
+  font-size: $font-size-base;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+// ----------------------------------------------
+// TIMELINE
+// For experience/CV section
+// ----------------------------------------------
+
+.timeline {
+  position: relative;
+  padding-left: $space-6;
+
+  // Vertical line
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: $space-2;
+    bottom: $space-2;
+    width: 2px;
+    background-color: $color-border;
+  }
+}
+
+.timeline__item {
+  position: relative;
+  padding-bottom: $space-8;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+
+  // Dot on timeline
+  &::before {
+    content: '';
+    position: absolute;
+    left: calc(-#{$space-6} - 4px);  // Center on the line
+    top: $space-2;
+    width: 10px;
+    height: 10px;
+    background-color: $color-surface;
+    border: 2px solid $color-accent;
+    border-radius: 50%;
+  }
+}
+
+.timeline__header {
+  margin-bottom: $space-3;
+}
+
+.timeline__company {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-semibold;
+  color: $color-text;
+  margin: 0;
+}
+
+.timeline__role {
+  font-size: $font-size-base;
+  color: $color-text-muted;
+  margin: $space-1 0 0 0;
+}
+
+.timeline__dates {
+  font-family: $font-mono;
+  font-size: $font-size-sm;
+  color: $color-text-muted;
+  margin-top: $space-1;
+}
+
+.timeline__bullets {
+  list-style: disc;
+  padding-left: $space-4;
+  margin: $space-3 0 0 0;
+
+  li {
+    font-size: $font-size-base;
+    color: $color-text;
+    margin-bottom: $space-2;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// ----------------------------------------------
+// HERO
+// First section visitors see
+// ----------------------------------------------
+
+.hero {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (min-width: $breakpoint-md) {
+    min-height: 80vh;
+  }
+}
+
+.hero__content {
+  max-width: $container-narrow;
+}
+
+.hero__name {
+  font-size: $font-size-3xl;
+  font-weight: $font-weight-bold;
+  margin-bottom: $space-2;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $font-size-4xl;
+  }
+}
+
+.hero__title {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-normal;
+  color: $color-text-muted;
+  margin-bottom: $space-4;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $font-size-2xl;
+  }
+}
+
+.hero__value-prop {
+  font-size: $font-size-lg;
+  color: $color-text-muted;
+  line-height: $line-height-relaxed;
+  margin-bottom: $space-6;
+  max-width: 600px;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $space-4;
+}
+
+.hero__social {
+  display: flex;
+  gap: $space-4;
+
+  // On mobile, stack below button
+  @media (max-width: $breakpoint-md - 1px) {
+    width: 100%;
+    margin-top: $space-2;
+  }
+}
+
+// ----------------------------------------------
+// CONTACT
+// Get in touch section
+// ----------------------------------------------
+
+.contact__content {
+  text-align: center;
+  max-width: $container-narrow;
+  margin: 0 auto;
+}
+
+.contact__heading {
+  font-size: $font-size-2xl;
+  margin-bottom: $space-4;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $font-size-3xl;
+  }
+}
+
+.contact__text {
+  font-size: $font-size-lg;
+  color: $color-text-muted;
+  margin-bottom: $space-8;
+}
+
+.contact__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-4;
+
+  @media (min-width: $breakpoint-md) {
+    flex-direction: row;
+    justify-content: center;
+    gap: $space-6;
+  }
+}
+
+.contact__link {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-2;
+  font-size: $font-size-base;
+  color: $color-text;
+  text-decoration: none;
+  transition: color $transition-base;
+
+  &:hover {
+    color: $color-accent;
+    text-decoration: none;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+    color: $color-text-muted;
+    transition: color $transition-base;
+  }
+
+  &:hover svg {
+    color: $color-accent;
+  }
+}
