@@ -1,16 +1,33 @@
-name: Salvador's website
-description: Strategy, Data Science, and Sustainability
-meta_description: "torenunez - strategy | data science | sustainability"
+# ==============================================
+# SITE CONFIGURATION
+# Core settings for Jekyll and GitHub Pages
+# ==============================================
 
+# Site metadata (used in head.html for SEO)
+title: Salvador J. Nunez
+description: Strategy, Data Science, and Sustainability
+url: https://torenunez.github.io
+baseurl: ""
+
+# Author info
+author: Salvador J Nunez
+
+# Build settings
 markdown: kramdown
 highlighter: rouge
-logo: false
-paginate: 15
-baseurl: /
-domain_name: 'http://yourblog-domain.com'
-google_analytics: 'UA-XXXXXXXX-X'
-plugins: [jekyll-paginate]
 
-# Details for the RSS feed generator
-url:            'blog url'
-author:         'Salvador J Nunez'
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-seo-tag
+
+# Pagination (preserved for blog if re-enabled later)
+paginate: 15
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE.txt
+  - plans/

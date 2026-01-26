@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<!--
+  home.html — Portfolio homepage layout
+  Assembles all sections in order: Hero, Projects, Experience, Contact
+  Each section is a separate include for maintainability
+-->
+
+{% include nav.html %}
+
+<main>
+  {% include hero.html %}
+  {% include projects.html %}
+  {% include experience.html %}
+  {% include contact.html %}
+</main>
+
+{% include footer.html %}
