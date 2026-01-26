@@ -1,0 +1,23 @@
+<!--
+  projects.html — Projects section wrapper
+  Loops through _data/projects.yml and renders featured projects as cards
+-->
+
+<section id="projects" class="section section--projects">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="section-header">
+      <span class="section-label">01</span>
+      <h2 class="section-title">Projects</h2>
+    </div>
+
+    <!-- Project Cards Grid -->
+    <div class="grid grid--3">
+      {% for project in site.data.projects %}
+        {% if project.featured %}
+          {% include project_card.html project=project %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

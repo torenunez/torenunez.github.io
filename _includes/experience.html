@@ -1,0 +1,33 @@
+<!--
+  experience.html — Experience/CV section wrapper
+  Loops through _data/experience.yml and renders timeline items
+-->
+
+<section id="experience" class="section section--experience">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="section-header">
+      <span class="section-label">02</span>
+      <h2 class="section-title">Experience</h2>
+    </div>
+
+    <!-- Timeline -->
+    <div class="timeline">
+      {% for job in site.data.experience.jobs %}
+        {% include experience_item.html job=job %}
+      {% endfor %}
+    </div>
+
+    <!-- LinkedIn CTA -->
+    {% if site.data.experience.linkedin_url %}
+    <div class="mt-8">
+      <a href="{{ site.data.experience.linkedin_url }}" class="btn btn--secondary" target="_blank" rel="noopener">
+        {{ site.data.experience.linkedin_cta | default: "View full history on LinkedIn" }}
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 8h10M9 4l4 4-4 4"/>
+        </svg>
+      </a>
+    </div>
+    {% endif %}
+  </div>
+</section>

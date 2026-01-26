@@ -1,0 +1,18 @@
+<!--
+  nav.html — Sticky navigation bar
+  Links scroll to page sections via anchor IDs
+-->
+
+<nav class="nav">
+  <div class="container nav__inner">
+    <!-- Logo/Name — links to top of page -->
+    <a href="#" class="nav__logo">{{ site.data.profile.name | split: ' ' | first }}</a>
+
+    <!-- Navigation Links -->
+    <ul class="nav__links">
+      <li><a href="#projects" class="nav__link">Projects</a></li>
+      <li><a href="#experience" class="nav__link">Experience</a></li>
+      <li><a href="#contact" class="nav__link">Contact</a></li>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,20 @@
+<!--
+  experience_item.html — Single timeline entry component
+  Receives: job (object with company, role, dates, bullets)
+-->
+
+<div class="timeline__item">
+  <div class="timeline__header">
+    <h3 class="timeline__company">{{ include.job.company }}</h3>
+    <p class="timeline__role">{{ include.job.role }}</p>
+    <p class="timeline__dates">{{ include.job.dates }}</p>
+  </div>
+
+  {% if include.job.bullets %}
+  <ul class="timeline__bullets">
+    {% for bullet in include.job.bullets %}
+      <li>{{ bullet }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</div>

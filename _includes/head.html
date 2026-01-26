@@ -1,0 +1,43 @@
+<!--
+  head.html — Meta tags, fonts, and CSS
+  Included in default.html layout before </head>
+-->
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- SEO Meta -->
+<title>{{ site.data.profile.name }} — {{ site.data.profile.title }}</title>
+<meta name="description" content="{{ site.data.profile.value_prop | default: site.description }}">
+<meta name="author" content="{{ site.data.profile.name }}">
+
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ site.data.profile.name }} — {{ site.data.profile.title }}">
+<meta property="og:description" content="{{ site.data.profile.value_prop | default: site.description }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<!-- Future: uncomment when OG image is added
+<meta property="og:image" content="{{ site.url }}/assets/images/social/og.png">
+-->
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ site.data.profile.name }} — {{ site.data.profile.title }}">
+<meta name="twitter:description" content="{{ site.data.profile.value_prop | default: site.description }}">
+
+<!-- Fonts: Inter (sans) + JetBrains Mono (mono) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- Main Stylesheet -->
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+
+<!-- Future: Favicon (uncomment when assets are added)
+<link rel="icon" href="/assets/images/favicon/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/images/favicon/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/assets/images/favicon/apple-touch-icon-180.png">
+-->
+
+<!-- Canonical URL -->
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
