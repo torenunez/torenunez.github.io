@@ -1,0 +1,29 @@
+# ==============================================
+# PROJECTS: Featured work displayed on homepage
+# Add/remove items to update the projects section
+# Only projects with featured: true will display
+# ==============================================
+
+- title: Project One
+  description: Brief description of what this project does and the problem it solves.
+  tags:
+    - Python
+    - Data Science
+  repo_url: https://github.com/torenunez/project-one
+  featured: true
+
+- title: Project Two
+  description: One-line description highlighting the key technology or outcome.
+  tags:
+    - JavaScript
+    - API
+  repo_url: https://github.com/torenunez/project-two
+  featured: true
+
+- title: Project Three
+  description: What makes this project interesting or impactful in a single sentence.
+  tags:
+    - SQL
+    - Analytics
+  repo_url: https://github.com/torenunez/project-three
+  featured: true

@@ -1,0 +1,31 @@
+# ==============================================
+# EXPERIENCE: Work history displayed on homepage
+# Add/remove items to update the timeline
+# Most recent position should be first
+# ==============================================
+
+jobs:
+  - company: Current Company
+    role: Senior Engineer
+    dates: 2022 – Present
+    bullets:
+      - Led initiative that achieved measurable outcome X
+      - Built system handling Y scale or complexity
+
+  - company: Previous Company
+    role: Engineer
+    dates: 2019 – 2022
+    bullets:
+      - Accomplishment with quantified impact
+      - Technical contribution or leadership example
+
+  - company: Earlier Company
+    role: Junior Engineer
+    dates: 2017 – 2019
+    bullets:
+      - Key learning or foundational achievement
+      - Collaboration or growth example
+
+# LinkedIn CTA at bottom of experience section
+linkedin_cta: View full history on LinkedIn
+linkedin_url: https://linkedin.com/in/yourhandle

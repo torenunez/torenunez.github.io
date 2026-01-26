@@ -1,0 +1,18 @@
+# ==============================================
+# PROFILE: Personal info displayed across the site
+# Edit this file to update your name, title, and links
+# ==============================================
+
+name: Salvador J. Nunez
+title: "[Your Role]"
+value_prop: "[One sentence: what you do + why it matters]"
+
+# Hero section CTA button
+cta_text: View Projects
+cta_link: "#projects"
+
+# Social/contact links
+links:
+  github: https://github.com/torenunez
+  linkedin: https://linkedin.com/in/yourhandle
+  email: your@email.com
