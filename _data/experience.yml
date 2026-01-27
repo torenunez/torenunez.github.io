@@ -3,9 +3,14 @@
 # Add/remove items to update the timeline
 # Most recent position should be first
 # ==============================================
+#
+# Logo images should be placed in: assets/images/logos/
+# Recommended size: 40x40px (square), PNG or SVG
+# ==============================================
 
 jobs:
   - company: Current Company
+    logo: /assets/images/logos/company-1.svg
     role: Senior Engineer
     dates: 2022 – Present
     bullets:
@@ -13,6 +18,7 @@ jobs:
       - Built system handling Y scale or complexity
 
   - company: Previous Company
+    logo: /assets/images/logos/company-2.svg
     role: Engineer
     dates: 2019 – 2022
     bullets:
@@ -20,6 +26,7 @@ jobs:
       - Technical contribution or leadership example
 
   - company: Earlier Company
+    logo: /assets/images/logos/company-3.svg
     role: Junior Engineer
     dates: 2017 – 2019
     bullets:

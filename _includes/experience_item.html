@@ -1,9 +1,14 @@
 <!--
   experience_item.html — Single timeline entry component
-  Receives: job (object with company, role, dates, bullets)
+  Receives: job (object with company, logo, role, dates, bullets)
 -->
 
 <div class="timeline__item">
+  <!-- Company Logo (replaces the dot on timeline) -->
+  {% if include.job.logo %}
+  <img src="{{ include.job.logo | relative_url }}" alt="{{ include.job.company }} logo" class="timeline__logo">
+  {% endif %}
+
   <div class="timeline__header">
     <h3 class="timeline__company">{{ include.job.company }}</h3>
     <p class="timeline__role">{{ include.job.role }}</p>

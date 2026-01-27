@@ -72,6 +72,10 @@
   background-color: var(--section-contact-bg);
 }
 
+.section--education {
+  background-color: var(--section-projects-bg);  // Alternate with experience
+}
+
 // ----------------------------------------------
 // SECTION HEADERS
 // Consistent styling for section titles
@@ -224,6 +228,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+// Right-aligned variant — when no logo is present
+.nav__inner--centered {
+  justify-content: flex-end;
 }
 
 .nav__logo {

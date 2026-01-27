@@ -1,0 +1,25 @@
+<!--
+  education_item.html — Single education timeline entry
+  Receives: degree (object with institution, logo, degree, dates, accomplishments)
+-->
+
+<div class="timeline__item">
+  <!-- Institution Logo -->
+  {% if include.degree.logo %}
+  <img src="{{ include.degree.logo | relative_url }}" alt="{{ include.degree.institution }} logo" class="timeline__logo">
+  {% endif %}
+
+  <div class="timeline__header">
+    <h3 class="timeline__company">{{ include.degree.institution }}</h3>
+    <p class="timeline__role">{{ include.degree.degree }}</p>
+    <p class="timeline__dates">{{ include.degree.dates }}</p>
+  </div>
+
+  {% if include.degree.accomplishments %}
+  <ul class="timeline__bullets">
+    {% for item in include.degree.accomplishments %}
+      <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</div>

@@ -265,13 +265,13 @@ a.card {
 
 .timeline {
   position: relative;
-  padding-left: $space-6;
+  padding-left: 60px;  // Space for logo + gap
 
   // Vertical line
   &::before {
     content: '';
     position: absolute;
-    left: 0;
+    left: 20px;  // Center of 40px logo
     top: $space-2;
     bottom: $space-2;
     width: 2px;
@@ -287,11 +287,11 @@ a.card {
     padding-bottom: 0;
   }
 
-  // Dot on timeline
+  // Fallback dot when no logo (hidden when logo exists)
   &::before {
     content: '';
     position: absolute;
-    left: calc(-#{$space-6} - 4px);  // Center on the line
+    left: -44px;  // Center on the line
     top: $space-2;
     width: 10px;
     height: 10px;
@@ -299,6 +299,25 @@ a.card {
     border: 2px solid $color-accent;
     border-radius: 50%;
   }
+
+  // Hide dot when logo is present
+  &:has(.timeline__logo)::before {
+    display: none;
+  }
+}
+
+// Company logo on timeline
+.timeline__logo {
+  position: absolute;
+  left: -60px;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  background-color: $color-surface;
+  border: 2px solid $color-border;
+  border-radius: $radius-sm;
+  padding: 4px;
 }
 
 .timeline__header {

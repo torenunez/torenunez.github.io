@@ -1,0 +1,26 @@
+# ==============================================
+# EDUCATION: Academic history displayed on homepage
+# Add/remove items to update the timeline
+# Most recent degree should be first
+# ==============================================
+#
+# Logo images should be placed in: assets/images/logos/
+# Recommended size: 40x40px (square), PNG or SVG
+# ==============================================
+
+degrees:
+  - institution: University Name
+    logo: /assets/images/logos/university-1.svg
+    degree: Master of Science in Computer Science
+    dates: 2015 – 2017
+    accomplishments:
+      - Thesis on machine learning applications
+      - Graduate Teaching Assistant
+
+  - institution: College Name
+    logo: /assets/images/logos/university-2.svg
+    degree: Bachelor of Science in Engineering
+    dates: 2011 – 2015
+    accomplishments:
+      - Graduated with honors
+      - Dean's List, 4 semesters

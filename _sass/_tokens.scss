@@ -113,7 +113,7 @@ $hero-bg-color: $color-bg;
 
 $section-projects-bg: $color-bg;
 $section-experience-bg: $color-surface;
-$section-contact-bg: $color-bg;
+$section-contact-bg: $color-surface;  // White to alternate with Education
 
 $texture-subtle: none;                   // Future: url('/assets/images/backgrounds/texture.webp')
 $texture-opacity: 0.03;

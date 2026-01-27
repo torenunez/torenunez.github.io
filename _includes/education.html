@@ -1,0 +1,20 @@
+<!--
+  education.html — Education section wrapper
+  Loops through _data/education.yml and renders timeline items
+-->
+
+<section id="education" class="section section--education">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="section-header">
+      <h2 class="section-title">Education</h2>
+    </div>
+
+    <!-- Timeline -->
+    <div class="timeline">
+      {% for degree in site.data.education.degrees %}
+        {% include education_item.html degree=degree %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

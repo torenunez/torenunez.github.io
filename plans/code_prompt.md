@@ -397,6 +397,8 @@ Each phase ends with a local preview so you can test and give feedback before pr
 **Local preview command:** `bundle exec jekyll serve`
 **View at:** `http://localhost:4000`
 
+**IMPORTANT WORKFLOW:** Always preview changes on localhost before committing or pushing. Never push untested changes directly to GitHub Pages.
+
 ---
 
 ### Phase 1: Setup ✅
