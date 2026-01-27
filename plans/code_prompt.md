@@ -412,6 +412,8 @@ Each phase ends with a local preview so you can test and give feedback before pr
 ---
 
 ### Phase 2: Design System ✅
+
+**Issue found:** GitHub Pages uses older Sass that doesn't support `@use` directive. Fixed by using `@import` instead in all SCSS files.
 4. ✅ Create `_sass/_tokens.scss` (colors, type, spacing, asset variables)
 5. ✅ Create `_sass/_base.scss` (reset, typography, links)
 6. ✅ Create `_sass/_layout.scss` (container, section, grid)
