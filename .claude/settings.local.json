@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git pull:*)",
+      "Bash(bundle install:*)",
+      "Bash(bundle exec jekyll serve:*)",
+      "Bash(bundle update:*)",
+      "Bash(bundle config:*)",
+      "Bash(BUNDLE_MIRROR__HTTPS://RUBYGEMS__ORG/= bundle install)",
+      "Bash(env 'BUNDLE_MIRROR__HTTPS://RUBYGEMS.ORG/=https://rubygems.org/' bundle install)",
+      "Bash(env 'BUNDLE_MIRROR__HTTPS://RUBYGEMS.ORG/=https://rubygems.org/' bundle exec jekyll serve)",
+      "Bash(rbenv versions:*)",
+      "Bash(brew list:*)",
+      "Bash(docker --version:*)",
+      "Bash(docker run:*)",
+      "Bash(brew install:*)",
+      "Bash(export PATH=\"/opt/homebrew/opt/ruby/bin:/opt/homebrew/lib/ruby/gems/4.0.0/bin:$PATH\")",
+      "Bash(ruby --version:*)",
+      "Bash(gem install:*)",
+      "WebFetch(domain:www.linkedin.com)",
+      "Bash(curl:*)",
+      "Bash(ls:*)",
+      "WebFetch(domain:cdnlogo.com)",
+      "WebFetch(domain:en.wikipedia.org)",
+      "WebFetch(domain:block.xyz)",
+      "Bash(gh repo view:*)",
+      "Bash(git config:*)",
+      "WebFetch(domain:commons.wikimedia.org)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(cat:*)"
+    ]
+  }
+}
