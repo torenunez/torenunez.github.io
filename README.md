@@ -1,52 +1,66 @@
-# Kasper
+# Salvador J. Nunez - Portfolio
 
-> This is a port of Ghost's default theme [Casper](https://github.com/tryghost/casper) for Jekyll. 
-Feel free to fork, change, modify and re-use it.
+Personal portfolio website showcasing projects, experience, and skills. Built with Jekyll and hosted on GitHub Pages.
 
-## Installation
+**Live site:** [torenunez.github.io](https://torenunez.github.io)
 
-    git clone https://github.com/rosario/kasper.git
-    cd kasper
-    gem install jekyll
-    gem install pygments.rb
+## Local Development
 
-## How to use it
+**Requirements:** Ruby 3.4+ (via Homebrew recommended; system Ruby 2.6 is incompatible)
 
-Build page and start local web server
+```bash
+# Install dependencies
+bundle install
 
-    jekyll serve
+# Run local dev server (auto-rebuilds on changes)
+bundle exec jekyll serve
 
-Build page into `_site` folder
+# Build static site to _site/
+bundle exec jekyll build
+```
 
-    jekyll build
+## Project Structure
 
-## Kasper theme includes
+```
+_data/           # Content (YAML files)
+  ├── profile.yml      # Name, title, social links
+  ├── projects.yml     # Portfolio projects
+  ├── experience.yml   # Work history
+  └── education.yml    # Education entries
 
-* Pagination
-* Rss
-* Google Analytics Tracking code
-* Code Syntax Highlight
-* Author's profile with picture
-* Disqus comments
+_includes/       # Reusable HTML components
+_layouts/        # Page templates
+_sass/           # SCSS partials
+  ├── _tokens.scss     # Design system variables
+  ├── _base.scss       # Reset & typography
+  ├── _layout.scss     # Grid & sections
+  └── _components.scss # Buttons, cards, tags
 
-## Screenshots
+assets/          # Static files (CSS, images)
+```
 
-![index page](https://raw.github.com/rosario/kasper/master/assets/images/kasper-theme-index.png)
-![post page](https://raw.github.com/rosario/kasper/master/assets/images/kasper-theme-post.png)
+## Updating Content
 
+**Add a project:**
+```yaml
+# _data/projects.yml
+- title: Project Name
+  description: Brief description
+  tags: [Python, ML]
+  repo_url: https://github.com/...
+  featured: true  # Set to display on site
+```
 
-## Thanks
+**Add work experience:**
+```yaml
+# _data/experience.yml - add to jobs array
+- company: Company Name
+  role: Your Role
+  dates: 2022 – Present
+  bullets:
+    - Achievement with measurable impact
+```
 
-Most of the work has been already done by the Ghost team, I've just ported Casper to Jekyll. 
-I've also added few things specific to Jekyll and some minor style changes.
+## License
 
-## Copyright & License
-
-Copyright (C) 2013 Ghost Foundation - Released under the MIT License.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+MIT License
