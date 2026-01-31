@@ -314,10 +314,10 @@ a.card {
   width: 40px;
   height: 40px;
   object-fit: contain;
-  background-color: $color-surface;
-  border: 2px solid $color-border;
+  background-color: transparent;
+  border: none;
   border-radius: $radius-sm;
-  padding: 4px;
+  padding: 0;
 }
 
 .timeline__header {

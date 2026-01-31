@@ -11,7 +11,13 @@
 
   <div class="timeline__header">
     <h3 class="timeline__company">{{ include.degree.institution }}</h3>
-    <p class="timeline__role">{{ include.degree.degree }}</p>
+    {% if include.degree.degrees %}
+      {% for deg in include.degree.degrees %}
+        <p class="timeline__role">{{ deg }}</p>
+      {% endfor %}
+    {% else %}
+      <p class="timeline__role">{{ include.degree.degree }}</p>
+    {% endif %}
     <p class="timeline__dates">{{ include.degree.dates }}</p>
   </div>
 

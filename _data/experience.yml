@@ -9,29 +9,23 @@
 # ==============================================
 
 jobs:
-  - company: Current Company
-    logo: /assets/images/logos/company-1.svg
-    role: Senior Engineer
+  - company: Block
+    logo: /assets/images/logos/block.svg
+    role: Risk Analytics & Data Science Lead
     dates: 2022 – Present
     bullets:
-      - Led initiative that achieved measurable outcome X
-      - Built system handling Y scale or complexity
+      - Lead a global team supporting risk and compliance across all Block brands
+      - Measure and improve risk control impact through experimentation and ML, optimizing model-driven review systems
+      - Apply real-time decisioning and GenAI to automate and scale case management and manual workflows
 
-  - company: Previous Company
-    logo: /assets/images/logos/company-2.svg
-    role: Engineer
-    dates: 2019 – 2022
+  - company: Meta
+    logo: /assets/images/logos/meta.svg
+    role: Content Partnerships Data Science Lead
+    dates: 2017 – 2022
     bullets:
-      - Accomplishment with quantified impact
-      - Technical contribution or leadership example
-
-  - company: Earlier Company
-    logo: /assets/images/logos/company-3.svg
-    role: Junior Engineer
-    dates: 2017 – 2019
-    bullets:
-      - Key learning or foundational achievement
-      - Collaboration or growth example
+      - Led global analytics teams supporting entertainment and content partnerships
+      - Built scalable measurement and planning frameworks using Python, R, SQL, and ML
+      - Applied segmentation and causal measurement techniques to guide investment decisions and optimize creator performance at scale
 
 # LinkedIn CTA at bottom of experience section
 linkedin_cta: View full history on LinkedIn

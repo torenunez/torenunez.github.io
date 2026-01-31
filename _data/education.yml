@@ -9,18 +9,14 @@
 # ==============================================
 
 degrees:
-  - institution: University Name
-    logo: /assets/images/logos/university-1.svg
-    degree: Master of Science in Computer Science
-    dates: 2015 – 2017
-    accomplishments:
-      - Thesis on machine learning applications
-      - Graduate Teaching Assistant
+  - institution: University of California, Berkeley
+    logo: /assets/images/logos/berkeley.svg
+    degrees:
+      - M.Eng, Industrial Engineering & Operations Research
+      - Graduate Certificate, Engineering & Business for Sustainability
+    dates: "2013"
 
-  - institution: College Name
-    logo: /assets/images/logos/university-2.svg
-    degree: Bachelor of Science in Engineering
-    dates: 2011 – 2015
-    accomplishments:
-      - Graduated with honors
-      - Dean's List, 4 semesters
+  - institution: Yale University
+    logo: /assets/images/logos/yale.svg
+    degree: Bachelor of Science, Biomedical Engineering
+    dates: "2008"

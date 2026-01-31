@@ -4,26 +4,26 @@
 # Only projects with featured: true will display
 # ==============================================
 
-- title: Project One
-  description: Brief description of what this project does and the problem it solves.
+- title: Lerni
+  description: Local-first learning system combining Feynman Technique with SM-2 spaced repetition.
+  tags:
+    - Learning
+    - Spaced Repetition
+  repo_url: https://github.com/torenunez/lerni
+  featured: true
+
+- title: Kid Points
+  description: A system for tracking and managing points for kids.
   tags:
     - Python
-    - Data Science
-  repo_url: https://github.com/torenunez/project-one
+    - Family
+  repo_url: https://github.com/torenunez/kid_points
   featured: true
 
-- title: Project Two
-  description: One-line description highlighting the key technology or outcome.
+- title: Machine Learning
+  description: Content for Udacity's Machine Learning Engineer Nanodegree curriculum.
   tags:
-    - JavaScript
-    - API
-  repo_url: https://github.com/torenunez/project-two
-  featured: true
-
-- title: Project Three
-  description: What makes this project interesting or impactful in a single sentence.
-  tags:
-    - SQL
-    - Analytics
-  repo_url: https://github.com/torenunez/project-three
+    - Jupyter Notebook
+    - ML
+  repo_url: https://github.com/torenunez/machine-learning
   featured: true
