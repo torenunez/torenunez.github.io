@@ -5,19 +5,18 @@
 
 // ----------------------------------------------
 // COLORS (Light Mode)
-// Why these specific values? Professional, accessible, and works well with future
-// Mesoamerican geometric patterns (high contrast, neutral base)
+// Inspired by Ha Long Bay: teal water, soft blue-gray sky
 // ----------------------------------------------
 
 // Core palette
-$color-bg: #FAFAFA;              // Page background — slightly off-white to reduce eye strain
+$color-bg: #EDF4F7;              // Page background — soft blue-gray from sky tones
 $color-surface: #FFFFFF;         // Cards, elevated elements — pure white for contrast
-$color-text: #1A1A1A;            // Primary text — near-black for readability
-$color-text-muted: #6B6B6B;      // Secondary text — passes WCAG AA on white
-$color-border: #E5E5E5;          // Subtle borders — visible but not distracting
-$color-border-strong: #D0D0D0;   // Emphasized borders — for hover states
-$color-accent: #2563EB;          // Links, CTAs — passes WCAG AA, professional blue
-$color-accent-hover: #1D4ED8;    // Hover state — darker for clear feedback
+$color-text: #1A2B33;            // Primary text — dark blue-gray for readability
+$color-text-muted: #5A7080;      // Secondary text — muted blue-gray, passes WCAG AA
+$color-border: #D0DFE6;          // Subtle borders — blue-tinted gray
+$color-border-strong: #B8CCD6;   // Emphasized borders — for hover states
+$color-accent: #0D9488;          // Links, CTAs — teal matching the water
+$color-accent-hover: #0F766E;    // Hover state — deeper teal for feedback
 
 // ----------------------------------------------
 // TYPOGRAPHY
@@ -108,12 +107,12 @@ $shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
 // ----------------------------------------------
 
 // Asset path variables (SCSS) — used to generate CSS custom properties
-$hero-bg-image: none;                    // Future: url('/assets/images/hero/hero.webp')
-$hero-bg-color: $color-bg;
+$hero-bg-image: url('/assets/images/hero/southest_asia.jpg');
+$hero-bg-color: #7FBFBF;               // Fallback teal from the water
 
-$section-projects-bg: $color-bg;
-$section-experience-bg: $color-surface;
-$section-contact-bg: $color-surface;  // White to alternate with Education
+$section-projects-bg: #E6F0F3;         // Light blue-gray (darker alternate)
+$section-experience-bg: $color-surface; // White
+$section-contact-bg: $color-surface;   // White to alternate with Education
 
 $texture-subtle: none;                   // Future: url('/assets/images/backgrounds/texture.webp')
 $texture-opacity: 0.03;
